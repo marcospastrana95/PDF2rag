@@ -124,34 +124,34 @@ pip install -r requirements.txt
 
 ```bash
 # Pipeline completo: PDF → MD bruto → MD refinado → MD RAG
-python run_all.py --proyecto LegacIA-Ruta9
+python scripts/run_all.py --proyecto LegacIA-Ruta9
 
 # Solo Etapa 1 (PDF → MD bruto)
-python run_all.py --proyecto LegacIA-Ruta9 --solo-etapa 1
+python scripts/run_all.py --proyecto LegacIA-Ruta9 --solo-etapa 1
 
 # Solo Etapa 1.5 (MD bruto → MD refinado con IA)
-python run_all.py --proyecto LegacIA-Ruta9 --solo-etapa 1.5
+python scripts/run_all.py --proyecto LegacIA-Ruta9 --solo-etapa 1.5
 
 # Solo Etapa 2 (MD refinado → MD RAG)
-python run_all.py --proyecto LegacIA-Ruta9 --solo-etapa 2
+python scripts/run_all.py --proyecto LegacIA-Ruta9 --solo-etapa 2
 
 # Saltar la etapa de refinado (útil si los documentos ya están limpios)
-python run_all.py --proyecto LegacIA-Ruta9 --sin-refinado
+python scripts/run_all.py --proyecto LegacIA-Ruta9 --sin-refinado
 
 # Ver estimación de coste sin llamar a la API
-python run_all.py --proyecto LegacIA-Ruta9 --dry-run
+python scripts/run_all.py --proyecto LegacIA-Ruta9 --dry-run
 
 # Refinar solo un archivo concreto
-python refine_markdown.py --archivo "Embalsamamiento de cadáveres.md"
+python scripts/refine_markdown.py --archivo "Embalsamamiento de cadáveres.md"
 
 # Re-forzar refinado aunque ya exista en md_refinados/
-python refine_markdown.py --forzar
+python scripts/refine_markdown.py --forzar
 
 # Procesar solo un archivo en la Etapa 2
-python rag_builder_legacia.py --proyecto LegacIA-Ruta9 --only doc1.md
+python scripts/rag_builder_legacia.py --proyecto LegacIA-Ruta9 --only doc1.md
 
 # Re-procesar un archivo problemático con un modelo mejor
-python rag_builder_legacia.py --proyecto LegacIA-Ruta9 --model google/gemini-2.5-flash --only doc3.md
+python scripts/rag_builder_legacia.py --proyecto LegacIA-Ruta9 --model google/gemini-2.5-flash --only doc3.md
 ```
 
 ---
@@ -185,11 +185,12 @@ Para documentos grandes (tomos completos de revista) el coste de la Etapa 1.5 pu
 ## Estructura del repositorio
 
 ```
-script-conversion-pdf-a-md/
-├── run_all.py                   ← orquestador: Etapa 1 + 1.5 + 2
-├── convert_pdfs.py              ← Etapa 1: PDF → MD bruto
-├── refine_markdown.py           ← Etapa 1.5: MD bruto → MD refinado (IA)
-├── rag_builder_legacia.py       ← Etapa 2: MD refinado → MD RAG
+PDF2rag/
+├── scripts/
+│   ├── run_all.py               ← orquestador: Etapa 1 + 1.5 + 2
+│   ├── convert_pdfs.py          ← Etapa 1: PDF → MD bruto
+│   ├── refine_markdown.py       ← Etapa 1.5: MD bruto → MD refinado (IA)
+│   └── rag_builder_legacia.py   ← Etapa 2: MD refinado → MD RAG
 ├── modules/
 │   ├── fase0_diagnostico.py     ← diagnóstico cuantitativo y parámetros RAG
 │   ├── fase1_extraccion.py      ← preclean y strip pre-LLM
@@ -200,13 +201,15 @@ script-conversion-pdf-a-md/
 ├── prompts/
 │   ├── escritura_legacia_compact.md  ← prompt RAG para Etapa 2
 │   └── refine_md.md                  ← prompt de refinado para Etapa 1.5
-├── pdfs/                        ← input: PDFs originales
-├── md_brutos/                   ← Etapa 1 output
-├── md_refinados/                ← Etapa 1.5 output
-├── md_rag/                      ← Etapa 2 output, listos para Agentia
-├── informe_cobertura.txt
-├── informe_refinado.txt
-└── informe_global_legacia.txt
+├── tests/                       ← scripts de diagnóstico y pruebas
+├── legacy/                      ← versiones anteriores
+├── output/                      ← informes generados
+├── pdfs/                        ← input: PDFs originales (no versionado)
+├── md_brutos/                   ← Etapa 1 output (no versionado)
+├── md_refinados/                ← Etapa 1.5 output (no versionado)
+├── md_rag/                      ← Etapa 2 output, listos para Agentia (no versionado)
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
