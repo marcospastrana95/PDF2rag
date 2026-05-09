@@ -37,16 +37,27 @@ Pipeline para convertir documentos PDF en Markdown optimizado para RAG (Retrieva
         │      - Mojibake (Ã¡, Ã³...) → encoding roto
         │      - OCR corrupto (~, dígitos mezclados con letras)
         │      - Encabezados de revista repetidos (> 3 veces)
-        │      - Artículo enterrado en tomo completo
+        │      - Artículo enterrado en tomo completo de revista
         │  · Si el archivo está limpio → copia directa (0 tokens)
-        │  · Si necesita refinado → LLM (OpenRouter):
-        │      - Extrae solo el artículo de interés
-        │      - Repara encoding y OCR corrupto
-        │      - Elimina ruido estructural de la revista
+        │  · Si necesita refinado → LLM vía OpenRouter:
+        │      - Extrae solo el artículo de interés del tomo
+        │      - Elimina metadatos editoriales (afiliaciones, DOIs,
+        │        fechas de recepción, citas, abstract en inglés)
+        │      - Elimina referencias bibliográficas y notas al pie
+        │      - Repara mojibake y OCR corrupto
+        │      - Elimina encabezados de revista repetidos y números de página
         │      - Unifica párrafos fragmentados por saltos de página
-        │  · Chunking automático para documentos > 12.000 palabras
-        │  · Cache: salta archivos ya existentes en md_refinados/
-        │  · Informe de tokens consumidos por archivo
+        │  · Chunking automático para documentos > 12.000 palabras:
+        │      - Chunks de 5.000 palabras con solapamiento de 150
+        │      - Chunks procesados en paralelo (máx. 4 por archivo)
+        │  · Checkpoint por chunk: cada chunk se guarda en
+        │    refine_estado.json en cuanto termina — si se interrumpe,
+        │    el siguiente arranque retoma desde el chunk exacto donde quedó
+        │  · Procesamiento paralelo de archivos (default: 8 workers)
+        │  · Skip automático de archivos ya completados (estado persistente)
+        │  · Modelos: deepseek/deepseek-v4-flash (default) con fallback
+        │    automático a gemini-2.5-flash-lite → gemini-2.5-flash
+        │  · Informe de tokens consumidos y ratio de retención por archivo
         │
         ▼
 [ md_refinados/ ]
@@ -166,6 +177,54 @@ La Etapa 1.5 solo consume tokens en archivos que realmente lo necesitan. Los doc
 | Etapa 2 (RAG builder) | `deepseek/deepseek-v4-flash` | ~0.003 € |
 
 Para documentos grandes (tomos completos de revista) el coste de la Etapa 1.5 puede ser mayor, pero después la Etapa 2 recibe un documento mucho más pequeño — el coste total es similar o inferior.
+
+---
+
+## Etapa 1.5 — Refinado con IA en detalle
+
+### ¿Qué hace el LLM?
+
+El modelo recibe el texto bruto extraído del PDF y aplica las siguientes transformaciones:
+
+| Tarea | Descripción |
+|---|---|
+| **Extracción del artículo** | Si el PDF es un número completo de revista, extrae solo el artículo indicado por el nombre del archivo, descartando portadas, sumarios y otros artículos |
+| **Limpieza de metadatos** | Elimina afiliaciones, emails, DOIs, ISSNs, fechas de recepción/aceptación y líneas de citación |
+| **Eliminación de referencias** | Suprime la sección de REFERENCIAS/BIBLIOGRAFÍA y las notas al pie inline (`[1]`, `[24]`...) |
+| **Idioma** | Conserva resumen y palabras clave en español; elimina abstract en inglés u otros idiomas |
+| **Reparación OCR** | Corrige mojibake (`Ã¡` → `á`) y caracteres corruptos de OCR |
+| **Limpieza estructural** | Elimina encabezados repetidos de revista, números de página sueltos y separadores redundantes |
+| **Reconstrucción de párrafos** | Une frases cortadas por saltos de página |
+
+### Procesamiento paralelo y velocidad
+
+- **8 archivos en paralelo** por defecto (ajustable con `--workers N`)
+- **Hasta 4 chunks en paralelo** dentro de cada archivo
+- Sin esperas artificiales entre llamadas — el rate limiting lo gestiona OpenRouter
+
+### Checkpoint y resume
+
+El estado se guarda en `refine_estado.json` chunk a chunk, en tiempo real. Si el proceso se interrumpe (Ctrl+C, corte de luz, cierre del portátil), el siguiente arranque:
+
+1. Salta automáticamente los archivos ya completados
+2. Retoma los archivos a medias desde el chunk exacto donde se quedó
+3. No repite ninguna llamada a la API ya realizada
+
+```bash
+# Reanudar tras una interrupción — simplemente volver a lanzar
+python scripts/run_all.py --proyecto LegacIA-Ruta9 --solo-etapa 1.5
+
+# Forzar re-proceso de un archivo concreto
+python scripts/refine_markdown.py --archivo "nombre.md" --forzar
+```
+
+### Modelos y fallback
+
+| Prioridad | Modelo | Uso |
+|---|---|---|
+| 1 | `deepseek/deepseek-v4-flash` | Default — rápido y económico |
+| 2 | `google/gemini-2.5-flash-lite` | Fallback automático |
+| 3 | `google/gemini-2.5-flash` | Fallback si los anteriores fallan |
 
 ---
 
