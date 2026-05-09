@@ -1,0 +1,29 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Variables de entorno (API keys)
+.env
+
+# Datos generados — no subir PDFs ni MDs procesados
+pdfs/
+md_brutos/
+md_refinados/
+
+# Estado y logs generados en ejecución
+refine_estado.json
+informe_refinado.txt
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VSCode
+.vscode/
