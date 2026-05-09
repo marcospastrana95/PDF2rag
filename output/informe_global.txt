@@ -1,0 +1,215 @@
+══════════════════════════════════════════════════════════════════════════════════════════
+INFORME GLOBAL — RAG Builder Agentia
+Modelo: google/gemini-2.5-flash-lite    Fecha: 2026-04-29T09:54:11
+══════════════════════════════════════════════════════════════════════════════════════════
+
+Origen                    Final                               Estado   Estr       €
+──────────────────────────────────────────────────────────────────────────────────────────
+-INDUSTRIA-OSEA (2).md    01_industria_osea_2_sem_v1.md       OK       semantic   0.00803
+charla_4_grabados_rupestres_isla_fuerteventura.md 02_charla_4_grabados_rupestres_is_sem_v1.md OK       semantic   0.00708
+CONTEXTO HISTORICO.md     03_contexto_historico_sem_v1.md     OK       semantic   0.00578
+CUENTAS.md                04_cuentas_sem_v1.md                OK       semantic   0.00559
+Cuestiones sobre la cronología de la Cueva Pintada de Gáldar (Gran Canaria).md 05_cuestiones_sobre_la_cronolog_a_sem_v1.md OK       semantic   0.00620
+El centenario de la Cueva Pintada de Gáldar.md 06_el_centenario_de_la_cueva_pint_sem_v1.md OK       semantic   0.02776
+El culto a las cuevas entre los aborigenes canarios.md 07_el_culto_a_las_cuevas_entre_lo_sem_v1.md OK       semantic   0.01020
+FICHA-LA-INDUSTRIA-OSEA.md 08_ficha_la_industria_osea_sem_v1.md OK       semantic   0.00566
+grabados (2).md           09_grabados_2_sem_v1.md             OK       semantic   0.00591
+GRABADOS.md               10_grabados_sem_v1.md               REVISAR  semantic   0.01922
+informacion didactica.md  11_informacion_didactica_sem_v1.md  OK       semantic   0.00568
+LA SALUD ORAL DE LA POBLACIÓN PREHISPÁNICA.md 12_la_salud_oral_de_la_poblaci_n__sem_v1.md OK       fixed      0.01310
+Las pintaderas de Gran Canaria.md 13_las_pintaderas_de_gran_canaria_sem_v1.md OK       semantic   0.03452
+MoraSpringerPH2024.md     14_moraspringerph2024_sem_v1.md     REVISAR  semantic   0.01879
+Museo y Parque Arqueológico Cueva Pintada, Gáldar (Gran Canaria).md 15_museo_y_parque_arqueol_gico_cu_sem_v1.md OK       semantic   0.00421
+propósito  del  poblamiento  aborigen  en  Gran  Canaria.  Demografía,  dinámica  social y ocupación del territorio-2.md 16_prop_sito_del_poblamiento_abor_sem_v1.md OK       fixed      0.02472
+Reconstrucción del modelo económico y alimenticio.md 17_reconstrucci_n_del_modelo_econ_sem_v1.md OK       fixed      0.01196
+──────────────────────────────────────────────────────────────────────────────────────────
+TOTAL: 17 archivos
+Tokens: 442076 in + 80513 out
+Coste estimado: 0.2144 €
+
+LAGUNAS DETECTADAS POR ARCHIVO:
+
+> 02_charla_4_grabados_rupestres_is_sem_v1.md:
+  (no incluir en producción)
+  - No se incluye información detallada sobre las "Láminas del Audiovisual" más allá de su mención, ya que el texto bruto solo lista las imágenes sin descripción del contenido específico de cada una.
+  - La sección "BIBLIOGRAFÍA" mencionada en el índice no aparece desarrollada en el texto bruto.
+
+> 04_cuentas_sem_v1.md:
+  (no incluir en producción)
+  - Falta información detallada sobre la metodología específica de datación y análisis de los materiales cerámicos y líticos.
+  - No se especifica la procedencia exacta de la mitad de los materiales cerámicos cuyo contexto cultural se desconoce.
+  - La descripción de los restos óseos es limitada; se agradecería mayor detalle sobre su tipología y función.
+  - La información sobre la agricultura en Fuerteventura es contradictoria y requiere mayor clarificación.
+  - Los detalles sobre la organización política y económica-social (reinos, diezmo, propiedad del ganado) son fragmentarios y se beneficiarían de una exposición más exhaustiva.
+  - La muralla de Jandía y su papel divisorio o de reserva de pastos necesita una explicación más concluyente.
+
+> 05_cuestiones_sobre_la_cronolog_a_sem_v1.md:
+  (no incluir en producción)
+  - [Falta información detallada sobre la datación absoluta de las figurillas y su relación cronológica exacta con el Neolítico del Mediterráneo oriental.]
+  - [No se especifica la procedencia exacta de las tierras utilizadas para colmatar la cueva en 1873.]
+  - [No se detallan los "materiales que luego enumeraremos" mencionados en el texto.]
+  - [Falta la descripción de la "primera obra citada" en la nota al pie 1.]
+  - [No se detalla la "primera obra citada" en la nota al pie 2.]
+  - [No se detalla la "primera obra citada" en la nota al pie 3.]
+  - [No se detalla la "primera obra citada" en la nota al pie 4.]
+  - [No se detalla la "primera obra citada" en la nota al pie 5.]
+  - [No se detalla la "primera obra citada" en la nota al pie 6.]
+  - [No se detalla la "primera obra citada" en la nota al pie 7.]
+  - [No se detalla la "primera obra citada" en la nota al pie 8.]
+  - [No se detalla la "primera obra citada" en la nota al pie 9.]
+  - [No se detalla la "primera obra citada" en la nota al pie 10.]
+  - [No se detalla la "primera obra citada" en la nota al pie 11.]
+  - [No se detalla la "primera obra citada" en la nota al pie 12.]
+  - [No se detalla la "primera obra citada" en la nota al pie 13.]
+  - [No se detalla la "primera obra citada" en la nota al pie 14.]
+  - [No se detalla la "primera obra citada" en la nota al pie 15.]
+  - [No se detalla la "primera obra citada" en la nota al pie 16.]
+  - [No se detalla la "primera obra citada" en la nota al pie 17.]
+  - [No se detalla la "primera obra citada" en la nota al pie 18.]
+  - [No se detalla la "primera obra citada" en la nota al pie 19.]
+  - [No se detalla la "primera obra citada" en la nota al pie 20.]
+  - [No se detalla la "primera obra citada" en la nota al pie 21.]
+  - [No se detalla la "primera obra citada" en la nota al pie 22.]
+  - [No se detalla la "primera obra citada" en la nota al pie 23.]
+
+> 07_el_culto_a_las_cuevas_entre_lo_sem_v1.md:
+  (no incluir en producción)
+  - No se ha podido determinar la fecha exacta de publicación de la versión digital de Almogaren XXXIX/2008, solo se conoce el año del contenido impreso.
+  - Falta información detallada sobre la metodología específica utilizada para la datación de los hallazgos arqueológicos.
+  - La descripción de las "rutas de lo sagrado" es general y podría beneficiarse de una mayor especificación geográfica y de los elementos cultuales encontrados en cada una.
+
+> 08_ficha_la_industria_osea_sem_v1.md:
+  (no incluir en producción)
+  - Falta información detallada sobre la metodología de conservación de los útiles óseos.
+  - No se especifica la procedencia exacta de las ilustraciones de Leonardo Torriani y L. Torriani.
+  - La bibliografía en la sección de datos técnicos está incompleta (faltan títulos, fuentes, volúmenes, páginas para la mayoría de las referencias).
+  - No se proporciona la referencia completa para Harding (1961) ni para Antonio Tejera Gaspar.
+  - Falta la descripción de la "agua en hueso" del video mencionado.
+  - No se detalla la composición de las "menudencias" guardadas en las bolsas de cuero gamuzado.
+  - No se especifica el tipo de moluscos utilizados para adornos y decoración de cerámica.
+  - No se detalla la procedencia de la "Diadema Barranco de Guayadeque. Gran Canaria."
+  - No se especifica la procedencia de la "Ilustración de la crónica de la conquista, Le Canerien."
+  - No se especifica la procedencia de la imagen "Restos de cornamenta, lapas y escamas en un yacimiento de Gran Canaria."
+  - No se especifica la procedencia de la imagen "Bolsa de piel procedente de Gran Canaria."
+  - No se especifica la procedencia de la imagen "Registro óseo de la isla de La Palma. Portapunzones."
+  - No se especifica la procedencia de la imagen "Punzón en hueso de ovicáprido. Peña de las Cucharas-Fiquinineo Siglos XIII-XIV"
+  - No se especifica la procedencia de la imagen "Dado a lo relativo de la dureza del material óseo..."
+  - No se especifica la procedencia de la imagen "Tipologías de punzones en toda Europa"
+  - No se especifica la procedencia de la imagen "Dibujo de L. Torriani"
+  - No se especifica la procedencia de la imagen "Tocado de una comunidad indígena de África (Harding, 1961)"
+  - No se especifica la procedencia de la imagen "Ésta aparente sencillez en la vestimenta..."
+  - No se especifica la procedencia de la imagen "Leonardo Torriani realizó varias ilustraciones..."
+  - No se especifica la procedencia de la imagen "Son de una morfología muy variada..."
+  - No se especifica la procedencia de la imagen "Abreu Galindo sólo recogió información tardía..."
+  - No se especifica la procedencia de la imagen "Para la decoración de la cerámica..."
+  - No se especifica la procedencia de la imagen "En otras islas también se han localizado punzones..."
+  - No se especifica la procedencia de la imagen "Esta referencia es muy significativa..."
+  - No se especifica la procedencia de la imagen "Dado a lo relativo de la dureza del material óseo..."
+  - No se especifica la procedencia de la imagen "Para acercarnos a las formas de vida..."
+  - No se especifica la procedencia de la imagen "Punzón en hueso de ovicáprido. Peña de las Cucharas-Fiquinineo Siglos XIII-XIV"
+  - No se especifica la procedencia de la imagen "El sistema de fabricación"
+  - No se especifica la procedencia de la imagen "La industria ósea corresponde con el proceso..."
+  - No se especifica la procedencia de la imagen "Los útiles óseos que se han conservado en la actualidad..."
+  - No se especifica la procedencia de la imagen "Entre los útiles óseos característicos..."
+  - No se especifica la procedencia de la imagen "La mayoría de los huesos trabajados procede..."
+  - No se especifica la procedencia de la imagen "Aparte de los odres y cueros..."
+  - No se especifica la procedencia de la imagen "El zurrón era especialmente empleado..."
+  - No se especifica la procedencia de la imagen "En Lanzarote se utilizaba también un tipo de zurrón..."
+  - No se especifica la procedencia de la imagen "Además de los zurrones, parece que se empleaban unas bolsitas..."
+  - No se especifica la procedencia de la imagen "El proceso de elaboración comenzaba con la extracción..."
+  - No se especifica la procedencia de la imagen "Para su confección usaban punzones, agujas de hueso..."
+  - No se especifica la procedencia de la imagen "Abreu Galindo nos explica, por ejemplo..."
+  - No se especifica la procedencia de la imagen "Mientras Le Canarien dice que..."
+  - No se especifica la procedencia de la imagen "...se cubren con capas de pellejos de cabras..."
+  - No se especifica la procedencia de la imagen "Son de una morfología muy variada..."
+  - No se especifica la procedencia de la imagen "En palabras del catedrático de Prehistoria, Antonio Tejera Gaspar..."
+  - No se especifica la procedencia de la imagen "Leonardo Torriani realizó varias ilustraciones..."
+  - No se especifica la procedencia de la imagen "Ésta aparente sencillez en la vestimenta..."
+  - No se especifica la procedencia de la imagen "Abreu Galindo sólo recogió información tardía..."
+  - No se especifica la procedencia de la imagen "Según los textos, el uso del calzado..."
+  - No se especifica la procedencia de la imagen "...tenía el Rey Guarfía un bonete como mitra..."
+  - No se especifica la procedencia de la imagen "¿Qué otras evidencias materiales nos informan..."
+  - No se especifica la procedencia de la imagen "¿Con qué otra materia prima distinta al hueso..."
+  - No se especifica la procedencia de la imagen "¿Para qué usaron los cuernos en el yacimiento de Gran Canaria?"
+  - No se especifica la procedencia de la imagen "¿Qué trabajos podrían realizar los majos con las herramientas..."
+  - No se especifica la procedencia de la imagen "¿Qué instrumento necesitas para elaborar un punzón de hueso?"
+  - No se especifica la procedencia de la imagen "¿Cazarían aves para usar sus huesos, cómo lo harían?"
+  - No se especifica la procedencia de la imagen "¿Y los mamíferos marinos, para qué fin usarían los grandes huesos..."
+  - No se especifica la procedencia de la imagen "¿Según el video sobre la elaboración de una aguja de hueso..."
+  - No se especifica la procedencia de la imagen "¿Habría diferencias sexuales a la hora de confeccionar la vestimenta?"
+  - No se especifica la procedencia de la imagen "¿Cómo vestía la sociedad europea en el siglo XV? Expón las diferencias."
+  - No se especifica la procedencia de la imagen "Realiza un tocado: Coge un trozo de piel..."
+  - No se especifica la procedencia de la imagen "Asociado con los instrumentos óseos, conviene destacar el uso de cuernos..."
+  - No se especifica la procedencia de la imagen "Para la pesca utilizaban anzuelos de astas de cabra..."
+  - No se especifica la procedencia de la imagen "En algunos yacimientos han aparecido espinas y vértebras de pescado..."
+  - No se especifica la procedencia de la imagen "La arqueología aún no ha podido aportar datos sobre las técnicas pesqueras..."
+
+> 09_grabados_2_sem_v1.md:
+  (no incluir en producción)
+  - No se especifica la metodología de ejecución de los grabados en la sección "VIDEO 4- Introducción", aunque se menciona que se hablará de ello.
+  - La sección "DERQUE CASTELLANO FERNÁNDEZ" parece ser un error de extracción, ya que el contenido se refiere a la autoría del material y no a una entidad o concepto independiente. Se ha integrado como información contextual en la introducción.
+  - Las imágenes de las láminas no se han podido procesar como texto.
+
+> 10_grabados_sem_v1.md:
+  (no incluir en producción)
+  - Falta información detallada sobre la metodología de cálculo de la superficie del Monumento Natural y la discrepancia con el Anexo de Reclasificación.
+  - Ausencia de detalles sobre la composición exacta de los suelos Aridisoles (sódicos vs. marrones) y su distribución espacial.
+  - Información incompleta sobre la fauna invertebrada, con listas de especies pero sin detalles sobre su estado de conservación o relevancia ecológica específica para el Monumento.
+  - Ausencia de un plano detallado que muestre la zonificación del Plan Insular de Ordenación de Fuerteventura y la delimitación de las Áreas de Interés Florístico y Faunístico.
+  - Falta de información sobre la fecha exacta de aprobación definitiva de las Normas de Conservación vigentes y su publicación oficial.
+  - Ausencia de detalles sobre el estado actual de tramitación y las determinaciones específicas de los Planes Territoriales Especiales mencionados.
+
+> 11_informacion_didactica_sem_v1.md:
+  (no incluir en producción)
+  - Falta información sobre la expedición de Jean de Béthencourt y Gadifer de la Salle más allá de su liderazgo.
+  - No se detallan los "templos llamados efequén" más allá de su función y ubicación.
+  - No se especifica la metodología exacta de la "pesca química" ni la composición de la savia utilizada.
+  - No se proporciona información sobre la cantidad de animales domésticos traídos ni su distribución.
+  - No se detallan las diferencias entre las imágenes del poblado de La Atalayita y las preguntas asociadas.
+  - No se proporciona la lista completa de topónimos antiguos canarios para responder a la pregunta 4.
+
+> 12_la_salud_oral_de_la_poblaci_n__sem_v1.md:
+  (no incluir en producción)
+  - No se detallan los criterios exactos para la determinación del sexo en individuos no adultos, solo se menciona la dificultad y la decisión de no aplicarlo.
+  - La descripción de las "piezas dentarias" en la sección "El Material Objeto de Análisis" podría ser más específica sobre qué tipos de dientes (incisivos, caninos, premolares) se incluyeron además de los molares.
+  - No se proporciona una tabla detallada de la distribución de caries por tipo de diente (incisivo, canino, premolar, molar) dentro de las categorías de deciduos y permanentes, más allá de la mención de que la mayoría de las caries se localizaban en molares.
+
+> 13_las_pintaderas_de_gran_canaria_sem_v1.md:
+  (no incluir en producción)
+  - No se dispone de información sobre la periodicidad exacta de todas las secciones o la frecuencia de publicación de cada autor.
+  - La extensión de algunos artículos es considerable, superando potencialmente los límites de `max_chars` si se consideraran como un único chunk, aunque la estructura de la revista permite su segmentación natural.
+  - Falta información sobre la estrategia de chunking aplicada al texto original para determinar si se respetaron los parámetros de `overlap` y `min_chunk_size` en la extracción.
+
+> 14_moraspringerph2024_sem_v1.md:
+  (no incluir en producción)
+  - [No se ha podido determinar el significado del sustantivo femenino _t-lw-t_ en el análisis morfológico.]
+  - [La interpretación de la línea *F·T es compleja debido a la brevedad y la función del punto, requiriendo más documentación.]
+  - [La filiación cultural de los motivos naviformes es incierta, pudiendo ser de finales de la etapa aborigen o posteriores a la Conquista.]
+
+> 16_prop_sito_del_poblamiento_abor_sem_v1.md:
+  (no incluir en producción)
+  - No se ha incluido información detallada sobre las figuras mencionadas en el texto (Fig. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), ya que solo se proporcionaron las descripciones textuales y no las imágenes en sí.
+  - La sección "Más información sobre las dataciones" contiene enlaces que podrían estar desactualizados o rotos.
+
+> 17_reconstrucci_n_del_modelo_econ_sem_v1.md:
+  (no incluir en producción)
+  - [Falta información detallada sobre los "modos de vida" específicos que se infieren de la dieta cariogénica, más allá de la generalización de hábitos alimenticios.]
+  - [No se detallan las "normas sociales" que condicionaron la distribución de alimentos, solo se menciona que el estatus pudo ser un factor.]
+  - [La imagen de la página 45 no se ha procesado.]
+  - [La imagen de la página 47 no se ha procesado.]
+  - [La imagen de la página 49 no se ha procesado.]
+  - [La imagen de la página 51 no se ha procesado.]
+  - [La imagen de la página 53 no se ha procesado.]
+  - [La imagen de la página 55 no se ha procesado.]
+  - [La imagen de la página 57 no se ha procesado.]
+  - [La imagen de la página 59 no se ha procesado.]
+  - [La imagen de la página 61 no se ha procesado.]
+  - [La imagen de la página 63 no se ha procesado.]
+  - [La imagen de la página 65 no se ha procesado.]
+  - [La imagen de la página 67 no se ha procesado.]
+
+PRÓXIMOS PASOS:
+  1. Revisar archivos en estado REVISAR/ERROR.
+  2. Subir los .md finales al dashboard de Agentia (están limpios de notas).
+  3. Revisar el apartado de LAGUNAS arriba para completar información faltante.
+  4. Aplicar parámetros de chunking individuales (override por archivo si aplica).

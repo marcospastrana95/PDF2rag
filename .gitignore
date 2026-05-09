@@ -10,6 +10,8 @@ env/
 pdfs/
 md_brutos/
 md_refinados/
+images/
+legacy/images/
 
 # Estado y logs generados en ejecución
 refine_estado.json

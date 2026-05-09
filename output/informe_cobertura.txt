@@ -1,0 +1,15 @@
+================================================================================
+INFORME DE COBERTURA PDF -> MD
+================================================================================
+Archivo                                  Metodo            Pal.PDF   Pal.MD       %  Estado
+--------------------------------------------------------------------------------
+WebServices-Manual-Completo-2013.09.10.p native              37794    47159   66.7%  REVISAR
+--------------------------------------------------------------------------------
+Total: 1 | OK: 0 | OCR_OK: 0 | OCR_PARCIAL: 0 | REVISAR: 1 | ERROR: 0
+
+NOTAS:
+- native: texto extraido directamente (% = palabras texto / palabras PDF).
+- ocr_gemini: Gemini Vision en paralelo (% = paginas con >=20 palabras / total).
+- ocr / ocr_retry: Tesseract fallback (% = paginas con >=20 palabras / total).
+- OCR_PARCIAL: menos del 80% de paginas con texto legible.
+- native_fallback: PDF escaneado sin OCR disponible.
